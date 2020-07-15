@@ -1,0 +1,28 @@
+.contact_div{
+    margin: auto;
+    width: 25%;
+    color: honeydew;
+}
+.footer_countainer{
+    width: 100%;
+    min-height: 250px;
+    padding: 20px;
+}
+.contact{
+    padding-left: 30px;
+}
+.background{
+    background-color:#004924 ;
+}
+@media screen and (max-width: 1200px) {
+    .contact_div{
+     width: 50%;
+ 
+    }
+   }
+@media screen and (max-width: 600px) {
+   .contact_div{
+    width: 90%;
+
+   }
+  }

@@ -1,0 +1,106 @@
+<ion-content>
+  <div name="header">
+
+      <div class="header_body">
+         
+        <div class="menu_div">
+            <div class="logo_div">
+              <img src="../assets/logo.png" class="logotop">
+            </div>
+            <div class="contact_div" id="topcontact">
+              <div><b>Contacts:</b></div>
+              <div class="contact">
+                  <p> BOX 1622 – 80108<br>
+                    KILIFI, KENYA.<br>    
+                    Email: <a>datapretresearch@gmail.com</a>
+                      </p>
+              </div>
+          </div>
+          <div class="menu_container">
+            <div class="menu_div" ></div>
+              <div class="menu_div">
+                  <div class="topnav" id="myTopnav" click="myFunction2()">
+                    <a [routerLink]="['/home']" >HOME</a>
+                    <a class="active">BLOG</a>
+                    <a [routerLink]="['/home']">DOWNLOADS</a>
+                    <a href="#about" id="contacts_icon">CONTACTS</a>
+                    <a href="javascript:void(0);" class="icon" (click)="myFunction2()" >
+                      <i class="fa fa-bars"></i>
+                    </a>
+                  </div>
+                </div>
+          </div>
+         
+          </div>
+      
+    </div>
+  
+  </div>
+<ion-row>
+  <ion-col>
+    
+  </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col>
+      <div class="blog_body_container">
+    <div class="small_menu_container width100">
+      <div class="search_div">
+          <ion-searchbar animated></ion-searchbar>
+      </div>
+      <div class="Admin" *ngIf="!userDetails" [routerLink]="['/upload']">
+        <h2>Admin: Login</h2>
+      </div>
+      <div class="Admin" *ngIf="userDetails" [routerLink]="['/upload']">
+        <h2>New Blog</h2>
+        <p>Email: {{userDetails['email']}}</p>
+      </div>
+    </div>
+    
+    <div class="blog_list_container width100">
+      <div class="blogs">
+          <ion-card  text-text-justify *ngFor="let item of blogs" class="cardbackground">
+              <ion-card-header>
+                <ion-card-title>
+                 {{ item.title }}
+                </ion-card-title>
+              </ion-card-header>
+           
+              <ion-card-content>
+              <div *ngIf="item.imageUrl!='-'">
+                <img [src]="item.imageUrl" />
+                </div>
+                <div>
+                  <p [innerHtml]="item.contents"></p>
+                </div>
+                <div >
+                  <div *ngIf="userDetails" >
+                    <button class="btn btn-danger float-right"  (click)="presentAlertConfirm(item.id)">Delete</button>
+                  </div>
+                </div>
+               </ion-card-content>
+            </ion-card>
+      </div>
+       
+    </div>
+
+  </div>
+  </ion-col>
+  </ion-row>
+ 
+  
+  <div class="background_footer">
+      <div class="footer_countainer">
+        <div class="contact_div_footer" id="topcontact_footer">
+            <div><u><b>Contacts:</b></u></div>
+            <div class="contact_footer">
+              <p> BOX 1622 – 80108<br>
+                  KILIFI, KENYA.<br>    
+                  Email: <a>datapretresearch@gmail.com</a>
+                    </p>
+            </div>
+            </div>
+    </div>
+    </div>
+    
+</ion-content>

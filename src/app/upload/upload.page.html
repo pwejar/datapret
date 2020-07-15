@@ -1,0 +1,149 @@
+<ion-content>
+  <div name="header">
+
+      <div class="header_body">
+         
+        <div class="menu_div">
+            <div class="logo_div">
+              <img src="../assets/logo.png" class="logotop">
+            </div>
+            <div class="contact_div" id="topcontact">
+              <div><b>Contacts:</b></div>
+              <div class="contact">
+                  <p> BOX 1622 – 80108<br>
+                    KILIFI, KENYA.<br>    
+                    Email: <a>datapretresearch@gmail.com</a>
+                      </p>
+              </div>
+          </div>
+          <div class="menu_container">
+            <div class="menu_div" ></div>
+              <div class="menu_div">
+                  <div class="topnav" id="myTopnav" click="myFunction2()">
+                    <a [routerLink]="['/home']" >HOME</a>
+                    <a [routerLink]="['/blog']">BLOG</a>
+                    <a [routerLink]="['/home']">DOWNLOADS</a>
+                    <a class="active">ADMIN</a>
+                    <a href="#about" id="contacts_icon">CONTACTS</a>
+                    <a href="javascript:void(0);" class="icon" (click)="myFunction2()" >
+                      <i class="fa fa-bars"></i>
+                    </a>
+                  </div>
+                </div>
+          </div>
+         
+          </div>
+      
+    </div>
+  
+  </div>
+
+
+
+<div class="row">
+
+<div class="" style="width: 500px; margin: auto">
+
+  <div class="card">
+    <!-- When Uses is Not Logged In -->
+    <div class="card-body" *ngIf="!userDetails">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <div class="btn-group">
+            <button type="button" class="btn" [ngClass]="{'btn-primary
+              active': selectedVal == 'login' }"
+              (click)="onValChange('login')"><strong>Login</strong></button>
+            <button type="button" class="btn" [ngClass]="{'btn-primary
+              active': selectedVal == 'register' }"
+              (click)="onValChange('register')"><strong>Register</strong></button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" [(ngModel)]="emailInput"
+          id="email" placeholder="Email">
+      </div>
+      <div class="form-group" *ngIf="!isForgotPassword">
+        <label for="password">Password</label>
+        <input type="password" class="form-control"
+          [(ngModel)]="passwordInput" id="password" placeholder="Password">
+      </div>
+      <div class="form-group" *ngIf="!isForgotPassword">
+
+        <span *ngIf="selectedVal == 'login'; else elseBlock">
+          <button type="button" class="btn btn-primary" (click)="loginUser()">Log
+            In</button>
+        </span>
+        <ng-template #elseBlock>
+          <button type="button" class="btn btn-primary"
+            (click)="registerUser()">Register</button>
+        </ng-template>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <a href="javascript:void(0)" (click)="this.isForgotPassword= true;">Forgot
+          Password?</a>
+
+      </div>
+      <div class="form-group" *ngIf="isForgotPassword">
+
+        <button type="button" class="btn" (click)="this.isForgotPassword=
+          false;">Cancel</button>
+        <button type="button" class="btn btn-primary"
+          (click)="forgotPassword()">Get email to reset passowrd</button>
+      </div>
+      <div class="form-group text-center">
+        <img src="../assets/images/googlebtn.png" alt="" srcset=""
+          (click)="googleLogin()" style="cursor: pointer;">
+      </div>
+
+    </div>
+
+    <!-- When Uses is Logged In using Email or Google Account -->
+    <div class="no-border" *ngIf="userDetails">
+        <div class="card" style="width: 25rem;">
+            <div class="card-body">
+              <form [formGroup]="formTemplate" (submit)="onSubmit(formTemplate.value)">
+                <div class="text-center">
+                    <img [src]="imgSrc" accept="images/*"width="350px;" (click)="fileUpLoader.click()">
+                </div>
+                <div class="form-group">
+                 <label>Select Photo to upload</label>
+                 <input type="file" class="form-control" #fileUpLoader formControlName="imageUrl" (change)="showPrev($event)">
+                </div>
+                <div class="form-group">
+                 <input type="text" class="form-control" formControlName="title" placeholder="Title ...">
+                 <div *ngIf="isSubmitted && formControls.title.errors?.required" class="text-danger">this field is required</div>
+                </div>
+                <div class="form-group">
+                    <textarea  formControlName="contents" placeholder="comment">
+                    </textarea>
+                 </div>
+                 <div class="form-group">
+                   <p>Email: {{userDetails['email']}}</p>
+                 </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-danger"
+                    (click)="logoutUser()">Logout</button>
+                  <button type="submit" class="btn btn-success float-right">Blog</button>
+                </div>
+              </form>
+            </div>
+          </div>
+      
+    </div>
+  </div>
+  <div class="alert alert-{{responseMessageType}}" role="alert"
+    *ngIf="responseMessage.length">
+    {{responseMessage}}
+  </div>
+</div>
+</div>
+
+
+
+
+</ion-content>

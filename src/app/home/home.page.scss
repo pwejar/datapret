@@ -1,1 +1,434 @@
 
+// ----------------head
+.logotop{
+    max-width: 200px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#contacts_icon{
+  display: none;
+}
+.contact_div{
+    float: right;
+    margin-right: 40px;
+    margin-top: 8px;
+}
+.logo_div{
+    float: left;
+}
+.menu_div{
+    
+    overflow: hidden;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #004924;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: #013d1f;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+ 
+  #topcontact, .welcomeText, .trolly, #ontacts_icon{
+      display: none;
+  }
+  
+}
+
+.contact{
+  margin-left: 30px;
+  font-size: 90%;
+}
+.container{
+  background: #004924 ;
+  max-width: 1300px;
+  margin: auto;
+ }
+
+.header_cointainer{
+  background: rgb(235, 235, 235);
+}
+.header_body{
+  margin: auto;
+  background: honeydew;
+  //border-bottom: 1px solid white;
+  
+  background-image: radial-gradient(rgb(255, 255, 255), rgb(218, 214, 214));
+
+}
+
+#myTopnav{
+  text-align: center;
+  width: 100%;
+  
+ }
+.menu_container{
+  width: 100%;
+  overflow: hidden;
+  
+}
+
+//---------------------
+.sisi{
+    width: 100%;
+    overflow: hidden;
+    color: rgb(252, 252, 252);
+    position: relative;
+    -webkit-animation: myfirst 9s linear 2s infinite alternate; /* Safari 4.0 - 8.0 */
+    animation: myfirst 9s linear 2s infinite alternate;
+  }
+  
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes myfirst {
+    0%   {color:rgb(255, 255, 255); left:50px; top:0px;}
+    25%  {color:yellow; left:200px; top:0px;}
+    50%  {color:rgb(0, 174, 255); left:150px; top:0px;}
+    75%  {color:gold; left:0px; top:0px;}
+    100% {color:rgb(32, 19, 19); left:0px; top:0px;}
+  }
+  
+  /* Standard syntax */
+  @keyframes myfirst {
+    0%   {color:rgb(255, 255, 251); left:50px; top:0px;}
+    25%  {color:yellow; left:200px; top:0px;}
+    50%  {color:rgb(51, 255, 0); left:150px; top:0px;}
+    75%  {color:gold; left:0px; top:0px;}
+    100% {color:rgb(46, 44, 44); left:0px; top:0px;}
+  }
+  #trolly{
+    width: 34px;
+    margin-left: 100px;
+    margin-right: 30px;
+  }
+  
+  .asdf{
+      
+      background-image: radial-gradient(#004924, rgb(0, 51, 8));
+      margin: 0 auto;
+    }
+    .anime_content{
+      float: left;
+      font-size: 150;
+    }
+    .firstLine{
+      background-color: honeydew;
+      margin: 0;
+      width: 50%;
+      float: left;
+      display: block;
+      min-height: 300px;
+    }
+    .firstlineRow{
+      background-color: honeydew;
+    }
+    @media screen and (max-width: 600px) {
+      .sisi {
+        display: none;
+    }
+    .firstLine{
+      width: 100%;
+    }
+  
+  }
+  .textMargin{
+    padding: 30px;
+  }
+  .textMargin p{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 120%;
+  }
+  .slidesImages{
+   width: 1500px;
+   position: absolute;
+  
+  }
+  .mySlides{
+  
+    overflow: hidden;
+  background-color: rgb(73, 73, 17);
+  background-size: cover;
+  }
+  .triangle-right, .triangle-up, .slides_icon{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  .triangle-right {
+      width: 0;
+      height: 0;
+      border-top: 175px solid transparent;
+      border-left: 150px solid rgb(247, 248, 255);
+      border-bottom: 70px solid transparent;
+  }
+  .triangle-up {
+      width: 0;
+      height: 0;
+      border-left: 150px solid transparent;
+      border-right: 355px solid transparent;
+      border-bottom: 110px solid #555;
+  }
+  .slides_icon{
+  max-width: 80px;
+  position: absolute;
+    left: 0px;
+    bottom: 60px;
+    opacity: 0.5;
+    
+  }
+  .positionText{
+    position: absolute;
+    left: 80px;
+    bottom: 30px;
+    color: white;
+  }
+  ion-slide {
+    width: 100% !important;
+    height: 300px !important;
+  }
+  ion-slides {
+    width: 100% !important;
+    height: 300px !important;
+  }
+  
+  
+
+  // -------------- services
+  // ----- serives
+.servicesTitle{
+    margin: 30px;
+    color: aliceblue;
+    font-size: 150%;
+  }
+  .services_div{
+    width: 100%;
+    background-color: honeydew;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+     }
+  .servicesCard_div{
+    width: 20%;
+    margin: 20px;
+    height: 150px;
+    text-align: center;
+    
+  }
+  .imageServices{
+    max-height: 50px;
+  }
+.servicesText{
+  font-size: 90%;
+}
+  
+  .textServises{
+    background-color: whitesmoke;
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    margin: 0%;
+  }
+  .services_countainer{
+    width: 80%;
+    margin: auto;
+
+  }
+  .topNegateve{
+    margin-top: -50px;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .servicesCard_div{
+      width: 40%;
+      height: 150px;
+      
+    }
+    .services_countainer{
+      width: 90%;
+    }
+    .topNegateve{
+      margin-top: -50px;
+    }
+    
+  }
+  @media screen and (max-width: 600px) {
+    .servicesCard_div{
+      width: 90%;
+      height: 200px;
+      
+    }
+    .services_countainer{
+      width: 100%;
+    }
+    .topNegateve{
+      margin-top: -50px;
+    }
+    
+  }
+  
+  // infrustructure section
+  .infrastructure_div{
+    width: 100%;
+    background-color: honeydew;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  .infrastructure_item{
+    width: 50%;
+    text-align: center;
+    color: blue;
+    
+  }
+  .infrastructure_container{
+    width: 70%;
+    margin: auto;
+
+  }
+  
+  @media screen and (max-width: 600px) {
+    .infrastructure_item{
+      width: 100%;
+        
+    }
+    .infrastructure_container{
+      width: 100%;
+    }
+    
+  }
+
+  // --- lowerpart
+  .coloringLower{
+    background-color: honeydew;
+    padding-top: 35px;
+}
+
+ion-avatar{
+  width: 200px;  
+  height: 200px;
+  margin: auto;
+}
+ion-card{
+      background-image: radial-gradient(whitesmoke, white);
+}
+
+ .infrastructure_divLower{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .infrastructure_itemLower{
+    width: 40%;
+    text-align: center;
+    color: green;
+    margin-top: 30px;
+    
+    
+  }
+  .infrastructure_item2{
+    width: 60%;
+    text-align: center;
+    color: black;
+    text-align: justify;
+    
+  }
+  .infrastructure_containerLower{
+    width: 60%;
+    margin: auto;
+    padding-bottom: 30px;
+
+  }
+  .infrastructre_picLower{
+    margin: auto;
+    flex: content;
+  }
+  .jibambe{
+    margin-right: -20px;
+  }
+  .cv_div{
+    padding: 25px;
+  }
+  @media screen and (max-width: 1200px) {
+   
+    .infrastructure_containerLower{
+      width: 75%;
+    }
+    ion-avatar{
+      width: 150px;  
+      height: 150px;
+     }
+    
+  }
+  @media screen and (max-width: 600px) {
+    .infrastructure_itemLower, .infrastructure_item2{
+      width: 100%;
+        
+    }
+    .infrastructure_containerLower{
+      width: 100%;
+    }
+    ion-avatar{
+      width: 250px;  
+      height: 250px;
+       }
+  }
+  
